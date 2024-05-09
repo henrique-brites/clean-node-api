@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "[husky] pre-commit";
+
+npx validate-branch-name
+
+# npx tsc --noEmit
+
+FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+echo "[husky] format:staged";
+npm run format:staged
+echo "[husky] lint:fix:staged";
+npm run lint:fix:staged
+
+# Add back the modified/prettified files to staging
+echo "$FILES" | xargs git add
+
+exit 0

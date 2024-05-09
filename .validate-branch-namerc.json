@@ -1,0 +1,4 @@
+{
+  "pattern": "^(main|develop){1}$|^(feature|feat|fix|hotfix|release|chore)\/.+$",
+  "errorMsg": "Error: The branch name doesn't follow the established pattern. Please use a valid format."
+}
