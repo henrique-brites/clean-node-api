@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:staged": "jest",
     "prepare": "husky",
     "lint": "eslint \"src/**/*.ts\"",
     "lint:fix": "npm run lint --fix",
