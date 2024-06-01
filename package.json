@@ -7,7 +7,7 @@
     "node": "20.x"
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests",
     "prepare": "husky",
     "lint": "eslint \"src/**/*.ts\"",
