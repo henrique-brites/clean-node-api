@@ -14,6 +14,8 @@ echo "[husky] format:staged";
 npm run format:staged
 echo "[husky] lint:fix:staged";
 npm run lint:fix:staged
+echo "[husky] test:staged";
+npm run test:staged
 
 # Add back the modified/prettified files to staging
 echo "$FILES" | xargs git add
